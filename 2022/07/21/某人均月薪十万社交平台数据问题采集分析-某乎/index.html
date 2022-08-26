@@ -16,16 +16,16 @@
   <meta name="author" content="Wang Yuanxin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="## 背景介绍在平台上看到一个《有哪些不怎么知名，待遇却很好的公司？》的话题，有15,473关注者，被浏览次数达8,043,171，看来很多人在默默关注这类信息，于是决定通过爬虫技术、自然语言处理技术对该话题进行统计分析 数据采集通过Python采集了该话题下的245个回答部分采集代码展示： 12345678910111213141516171819202122def on_response(r">
+    <meta name="description" content="背景介绍在平台上看到一个《有哪些不怎么知名，待遇却很好的公司？》的话题，有15,473关注者，被浏览次数达8,043,171，看来很多人在默默关注这类信息，于是决定通过爬虫技术、自然语言处理技术对该话题进行统计分析 数据采集通过Python采集了该话题下的245个回答部分采集代码展示： 12345678910111213141516171819202122def on_response(respo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="某人均月薪十万社交平台数据问题采集分析-某乎">
 <meta property="og:url" content="http://example.com/2022/07/21/%E6%9F%90%E4%BA%BA%E5%9D%87%E6%9C%88%E8%96%AA%E5%8D%81%E4%B8%87%E7%A4%BE%E4%BA%A4%E5%B9%B3%E5%8F%B0%E6%95%B0%E6%8D%AE%E9%97%AE%E9%A2%98%E9%87%87%E9%9B%86%E5%88%86%E6%9E%90-%E6%9F%90%E4%B9%8E/index.html">
 <meta property="og:site_name" content="爱Python的王三金">
-<meta property="og:description" content="## 背景介绍在平台上看到一个《有哪些不怎么知名，待遇却很好的公司？》的话题，有15,473关注者，被浏览次数达8,043,171，看来很多人在默默关注这类信息，于是决定通过爬虫技术、自然语言处理技术对该话题进行统计分析 数据采集通过Python采集了该话题下的245个回答部分采集代码展示： 12345678910111213141516171819202122def on_response(r">
+<meta property="og:description" content="背景介绍在平台上看到一个《有哪些不怎么知名，待遇却很好的公司？》的话题，有15,473关注者，被浏览次数达8,043,171，看来很多人在默默关注这类信息，于是决定通过爬虫技术、自然语言处理技术对该话题进行统计分析 数据采集通过Python采集了该话题下的245个回答部分采集代码展示： 12345678910111213141516171819202122def on_response(respo">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2022/07/21/%E6%9F%90%E4%BA%BA%E5%9D%87%E6%9C%88%E8%96%AA%E5%8D%81%E4%B8%87%E7%A4%BE%E4%BA%A4%E5%B9%B3%E5%8F%B0%E6%95%B0%E6%8D%AE%E9%97%AE%E9%A2%98%E9%87%87%E9%9B%86%E5%88%86%E6%9E%90-%E6%9F%90%E4%B9%8E/文章封面图（仅部分主题支持）">
 <meta property="article:published_time" content="2022-07-21T03:51:56.000Z">
-<meta property="article:modified_time" content="2022-08-26T06:16:59.882Z">
+<meta property="article:modified_time" content="2022-08-26T06:35:29.452Z">
 <meta property="article:author" content="Wang Yuanxin">
 <meta property="article:tag" content="爬虫">
 <meta property="article:tag" content="数据分析">
@@ -278,7 +278,7 @@
             
               <div class="markdown-body">
                 
-                <p>﻿## 背景介绍<br>在平台上看到一个《有哪些不怎么知名，待遇却很好的公司？》的话题，有15,473关注者，被浏览次数达8,043,171，看来很多人在默默关注这类信息，于是决定通过爬虫技术、自然语言处理技术对该话题进行统计分析</p>
+                <h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>在平台上看到一个《有哪些不怎么知名，待遇却很好的公司？》的话题，有15,473关注者，被浏览次数达8,043,171，看来很多人在默默关注这类信息，于是决定通过爬虫技术、自然语言处理技术对该话题进行统计分析</p>
 <h2 id="数据采集"><a href="#数据采集" class="headerlink" title="数据采集"></a>数据采集</h2><p>通过Python采集了该话题下的245个回答<br>部分采集代码展示：</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">def</span> <span class="hljs-title function_">on_response</span>(<span class="hljs-params">response</span>):<br>    <span class="hljs-comment"># if &#x27;/api/v4/search_v3?gk_version=gz-gaokao&#x27; in response.url and response.status == 200:</span><br>    <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;api/v4/questions/30663527/feeds?&#x27;</span> <span class="hljs-keyword">in</span> response.url <span class="hljs-keyword">and</span> response.status == <span class="hljs-number">200</span>:<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> response.json()[<span class="hljs-string">&#x27;data&#x27;</span>]:<br>            insert_data(i)<br>        <span class="hljs-comment"># pass</span><br><span class="hljs-keyword">with</span> sync_playwright() <span class="hljs-keyword">as</span> p:<br>    browser = p.firefox.launch(headless=<span class="hljs-literal">False</span>)<br>    page = browser.new_page()<br>    page.on(<span class="hljs-string">&#x27;response&#x27;</span>, on_response)<br>    page.goto(<br>		<span class="hljs-string">&#x27;url&#x27;</span><br>    )<br>    time.sleep(<span class="hljs-number">2</span>)<br>    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>        page.evaluate(<span class="hljs-string">&quot;window.scrollTo(0, document.body.scrollHeight);&quot;</span>)<br>        <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;Button QuestionAnswers-answerButton Button--blue Button--spread&#x27;</span> <span class="hljs-keyword">in</span> page.content():<br>            <span class="hljs-keyword">break</span><br>        time.sleep(<span class="hljs-number">3</span>)<br>    page.wait_for_load_state(<span class="hljs-string">&#x27;networkidle&#x27;</span>)<br>    time.sleep(<span class="hljs-number">10</span>)<br>    browser.close()<br></code></pre></td></tr></table></figure>
 <h4 id="部分数据展示"><a href="#部分数据展示" class="headerlink" title="部分数据展示"></a>部分数据展示</h4><p><img src="https://img-blog.csdnimg.cn/52a0c76f564a40d496fcc6d90374ab9b.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
