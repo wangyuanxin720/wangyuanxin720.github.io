@@ -16,29 +16,27 @@
   <meta name="author" content="Wang Yuanxin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="title:某众点评爬虫采集-剧本杀市场分析-Python  本站所有数据均由作者定制的爬虫程序采集于互联网（类似于搜索引擎的爬虫），所有数据均为网站公开的非隐私数据，任何人均可看到。 本作者没有采用任何非法手段（例如黑客技术）盗取网站的非公开数据。 如果您觉得作者侵犯了您的合法权益，请联系作者予以处理   背景介绍伴随着《明星大侦探》等推理综艺走红，剧本杀游戏也成功出圈，成为年轻消费者偏好的休">
+    <meta name="description" content="## 背景介绍在平台上看到一个《有哪些不怎么知名，待遇却很好的公司？》的话题，有15,473关注者，被浏览次数达8,043,171，看来很多人在默默关注这类信息，于是决定通过爬虫技术、自然语言处理技术对该话题进行统计分析 数据采集通过Python采集了该话题下的245个回答部分采集代码展示： 12345678910111213141516171819202122def on_response(r">
 <meta property="og:type" content="article">
-<meta property="og:title" content="爱Python的王三金">
-<meta property="og:url" content="http://example.com/2022/08/26/%E6%9F%90%E4%BC%97%E7%82%B9%E8%AF%84%E7%88%AC%E8%99%AB%E9%87%87%E9%9B%86-%E5%89%A7%E6%9C%AC%E6%9D%80%E5%B8%82%E5%9C%BA%E5%88%86%E6%9E%90-Python/index.html">
+<meta property="og:title" content="某人均月薪十万社交平台数据问题采集分析-某乎">
+<meta property="og:url" content="http://example.com/2022/07/21/%E6%9F%90%E4%BA%BA%E5%9D%87%E6%9C%88%E8%96%AA%E5%8D%81%E4%B8%87%E7%A4%BE%E4%BA%A4%E5%B9%B3%E5%8F%B0%E6%95%B0%E6%8D%AE%E9%97%AE%E9%A2%98%E9%87%87%E9%9B%86%E5%88%86%E6%9E%90-%E6%9F%90%E4%B9%8E/index.html">
 <meta property="og:site_name" content="爱Python的王三金">
-<meta property="og:description" content="title:某众点评爬虫采集-剧本杀市场分析-Python  本站所有数据均由作者定制的爬虫程序采集于互联网（类似于搜索引擎的爬虫），所有数据均为网站公开的非隐私数据，任何人均可看到。 本作者没有采用任何非法手段（例如黑客技术）盗取网站的非公开数据。 如果您觉得作者侵犯了您的合法权益，请联系作者予以处理   背景介绍伴随着《明星大侦探》等推理综艺走红，剧本杀游戏也成功出圈，成为年轻消费者偏好的休">
+<meta property="og:description" content="## 背景介绍在平台上看到一个《有哪些不怎么知名，待遇却很好的公司？》的话题，有15,473关注者，被浏览次数达8,043,171，看来很多人在默默关注这类信息，于是决定通过爬虫技术、自然语言处理技术对该话题进行统计分析 数据采集通过Python采集了该话题下的245个回答部分采集代码展示： 12345678910111213141516171819202122def on_response(r">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/0208f459b5734cc6bb0c2bbc8534ceb6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA54ixcHl0aG9u55qE546L5LiJ6YeR,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/eb08a3a6255845da99eaf099129ba828.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA54ixcHl0aG9u55qE546L5LiJ6YeR,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/d02eadd6e53c45489f11c8560a1d3922.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA54ixcHl0aG9u55qE546L5LiJ6YeR,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/05958a51c96a4cfd95554669e137054f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA54ixcHl0aG9u55qE546L5LiJ6YeR,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/fccca0d8a2e14e5aa0939a0b24a2b2ec.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA54ixcHl0aG9u55qE546L5LiJ6YeR,size_19,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/cce56fd5ea224db7851264e9cd97fa7d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA54ixcHl0aG9u55qE546L5LiJ6YeR,size_19,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/d7e706d1d16d41018f21e42a96f6cc6f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA54ixcHl0aG9u55qE546L5LiJ6YeR,size_17,color_FFFFFF,t_70,g_se,x_16">
-<meta property="article:published_time" content="2022-08-26T05:26:56.389Z">
-<meta property="article:modified_time" content="2022-08-26T05:16:03.782Z">
+<meta property="og:image" content="http://example.com/2022/07/21/%E6%9F%90%E4%BA%BA%E5%9D%87%E6%9C%88%E8%96%AA%E5%8D%81%E4%B8%87%E7%A4%BE%E4%BA%A4%E5%B9%B3%E5%8F%B0%E6%95%B0%E6%8D%AE%E9%97%AE%E9%A2%98%E9%87%87%E9%9B%86%E5%88%86%E6%9E%90-%E6%9F%90%E4%B9%8E/文章封面图（仅部分主题支持）">
+<meta property="article:published_time" content="2022-07-21T03:51:56.000Z">
+<meta property="article:modified_time" content="2022-08-26T06:16:59.882Z">
 <meta property="article:author" content="Wang Yuanxin">
+<meta property="article:tag" content="爬虫">
+<meta property="article:tag" content="数据分析">
+<meta property="article:tag" content="可视化">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/0208f459b5734cc6bb0c2bbc8534ceb6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA54ixcHl0aG9u55qE546L5LiJ6YeR,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta name="twitter:image" content="http://example.com/2022/07/21/%E6%9F%90%E4%BA%BA%E5%9D%87%E6%9C%88%E8%96%AA%E5%8D%81%E4%B8%87%E7%A4%BE%E4%BA%A4%E5%B9%B3%E5%8F%B0%E6%95%B0%E6%8D%AE%E9%97%AE%E9%A2%98%E9%87%87%E9%9B%86%E5%88%86%E6%9E%90-%E6%9F%90%E4%B9%8E/文章封面图（仅部分主题支持）">
   
   
   
-  <title>爱Python的王三金</title>
+  <title>某人均月薪十万社交平台数据问题采集分析-某乎 - 爱Python的王三金</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="某人均月薪十万社交平台数据问题采集分析-某乎"></span>
           
         </div>
 
@@ -214,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-08-26 13:26" pubdate>
-          2022年8月26日 下午
+        <time datetime="2022-07-21 11:51" pubdate>
+          2022年7月21日 中午
         </time>
       </span>
     
@@ -226,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          578 字
+          1.1k 字
         
       </span>
     
@@ -237,7 +235,7 @@
         
         
         
-          5 分钟
+          9 分钟
         
       </span>
     
@@ -275,26 +273,23 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">某人均月薪十万社交平台数据问题采集分析-某乎</h1>
             
             
               <div class="markdown-body">
                 
-                <hr>
-<h2 id="title-某众点评爬虫采集-剧本杀市场分析-Python"><a href="#title-某众点评爬虫采集-剧本杀市场分析-Python" class="headerlink" title="title:某众点评爬虫采集-剧本杀市场分析-Python"></a>title:某众点评爬虫采集-剧本杀市场分析-Python</h2><blockquote>
-<ul>
-<li>本站所有数据均由作者定制的爬虫程序采集于互联网（类似于搜索引擎的爬虫），所有数据均为网站公开的非隐私数据，任何人均可看到。</li>
-<li>本作者没有采用任何非法手段（例如黑客技术）盗取网站的非公开数据。</li>
-<li>如果您觉得作者侵犯了您的合法权益，请联系作者予以处理</li>
+                <p>﻿## 背景介绍<br>在平台上看到一个《有哪些不怎么知名，待遇却很好的公司？》的话题，有15,473关注者，被浏览次数达8,043,171，看来很多人在默默关注这类信息，于是决定通过爬虫技术、自然语言处理技术对该话题进行统计分析</p>
+<h2 id="数据采集"><a href="#数据采集" class="headerlink" title="数据采集"></a>数据采集</h2><p>通过Python采集了该话题下的245个回答<br>部分采集代码展示：</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">def</span> <span class="hljs-title function_">on_response</span>(<span class="hljs-params">response</span>):<br>    <span class="hljs-comment"># if &#x27;/api/v4/search_v3?gk_version=gz-gaokao&#x27; in response.url and response.status == 200:</span><br>    <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;api/v4/questions/30663527/feeds?&#x27;</span> <span class="hljs-keyword">in</span> response.url <span class="hljs-keyword">and</span> response.status == <span class="hljs-number">200</span>:<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> response.json()[<span class="hljs-string">&#x27;data&#x27;</span>]:<br>            insert_data(i)<br>        <span class="hljs-comment"># pass</span><br><span class="hljs-keyword">with</span> sync_playwright() <span class="hljs-keyword">as</span> p:<br>    browser = p.firefox.launch(headless=<span class="hljs-literal">False</span>)<br>    page = browser.new_page()<br>    page.on(<span class="hljs-string">&#x27;response&#x27;</span>, on_response)<br>    page.goto(<br>		<span class="hljs-string">&#x27;url&#x27;</span><br>    )<br>    time.sleep(<span class="hljs-number">2</span>)<br>    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>        page.evaluate(<span class="hljs-string">&quot;window.scrollTo(0, document.body.scrollHeight);&quot;</span>)<br>        <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;Button QuestionAnswers-answerButton Button--blue Button--spread&#x27;</span> <span class="hljs-keyword">in</span> page.content():<br>            <span class="hljs-keyword">break</span><br>        time.sleep(<span class="hljs-number">3</span>)<br>    page.wait_for_load_state(<span class="hljs-string">&#x27;networkidle&#x27;</span>)<br>    time.sleep(<span class="hljs-number">10</span>)<br>    browser.close()<br></code></pre></td></tr></table></figure>
+<h4 id="部分数据展示"><a href="#部分数据展示" class="headerlink" title="部分数据展示"></a>部分数据展示</h4><p><img src="https://img-blog.csdnimg.cn/52a0c76f564a40d496fcc6d90374ab9b.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h2 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h2><p>做完EDA后只想说羡慕，别人家的公司。<br><img src="https://img-blog.csdnimg.cn/86c4c13e71d6450f8d96d915b491a6ca.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h3 id="ORG抽取"><a href="#ORG抽取" class="headerlink" title="ORG抽取"></a>ORG抽取</h3><p>从235篇答案中进行NER识别，抽取提到的公司名，由于数据量太小并且都是一些闷声发大财的公司，所以本次分析只展示不排名。<br><img src="https://img-blog.csdnimg.cn/b484f6fa97314498ac337c215e503689.png" srcset="/img/loading.gif" lazyload alt="不怎么知名待遇却很好的公司-词云图"></p>
+<h3 id="业务词抽取"><a href="#业务词抽取" class="headerlink" title="业务词抽取"></a>业务词抽取</h3><p>通过语义关系网络抽取了top20的待遇指标，并做了饼图展示。<br><img src="https://img-blog.csdnimg.cn/8a60b52ce4e349c2adf9a5861934fa1b.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>从图中反映的信息可以看出是否加班、工资、工作时间、福利等指标是目前打工人最关心的。</p>
+<h4 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h4><ul>
+<li>数据定制采集</li>
+<li>数据分析</li>
+<li>网站建设<br><img src="https://img-blog.csdnimg.cn/1130f28a14ab46a8a5925a683bcfb713.png" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></li>
 </ul>
-</blockquote>
-<h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><pre><code class="hljs">伴随着《明星大侦探》等推理综艺走红，剧本杀游戏也成功出圈，成为年轻消费者偏好的休闲娱乐活动之一。同时随着体验经济的发展，人们对剧本杀这种新消费业态接受度比较高，从而推动其在国内的快速发展。
-</code></pre>
-<h2 id="数据采集："><a href="#数据采集：" class="headerlink" title="数据采集："></a>数据采集：</h2><p>这节主要是讲解如何爬取数据。</p>
-<p>由于大众点评反爬非常非常非常非常非常严格，因此使用了cookie池、ip代理等诸多防ban手段。<br>某点评反爬策略是字体反爬，需要解析评论、销量等字体才能拿到数据，我们通过在页面信息中解析出字体css文件，对加密字体进行映射从而拿到数据。</p>
-<h3 id="数据展示："><a href="#数据展示：" class="headerlink" title="数据展示："></a>数据展示：</h3><p><img src="https://img-blog.csdnimg.cn/0208f459b5734cc6bb0c2bbc8534ceb6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA54ixcHl0aG9u55qE546L5LiJ6YeR,size_20,color_FFFFFF,t_70,g_se,x_16" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
-<h2 id="数据分析："><a href="#数据分析：" class="headerlink" title="数据分析："></a>数据分析：</h2><p>采集了全国不同地区剧本杀商家，进行地图分布统计。<br><img src="https://img-blog.csdnimg.cn/eb08a3a6255845da99eaf099129ba828.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA54ixcHl0aG9u55qE546L5LiJ6YeR,size_20,color_FFFFFF,t_70,g_se,x_16" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>可以看到排名前十的商家是北京、上海、武汉、成都、杭州、天津、深圳、沈阳、西安、重庆；<br><img src="https://img-blog.csdnimg.cn/d02eadd6e53c45489f11c8560a1d3922.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA54ixcHl0aG9u55qE546L5LiJ6YeR,size_20,color_FFFFFF,t_70,g_se,x_16" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>分别拿用户对剧本、对主持人、对环境的打分做了占比分析；<br><img src="https://img-blog.csdnimg.cn/05958a51c96a4cfd95554669e137054f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA54ixcHl0aG9u55qE546L5LiJ6YeR,size_20,color_FFFFFF,t_70,g_se,x_16" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/fccca0d8a2e14e5aa0939a0b24a2b2ec.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA54ixcHl0aG9u55qE546L5LiJ6YeR,size_19,color_FFFFFF,t_70,g_se,x_16" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/cce56fd5ea224db7851264e9cd97fa7d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA54ixcHl0aG9u55qE546L5LiJ6YeR,size_19,color_FFFFFF,t_70,g_se,x_16" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>对广州剧本杀评价进行了词云统计，可以看到DM是剧本杀灵魂，带玩家穿越体验不同人生，用户对环境氛围、服务等方面比较注重；<br><img src="https://img-blog.csdnimg.cn/d7e706d1d16d41018f21e42a96f6cc6f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA54ixcHl0aG9u55qE546L5LiJ6YeR,size_17,color_FFFFFF,t_70,g_se,x_16" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>这次的分享到这里就结束了，感谢观看，下期再见！</p>
-<h3 id="联系作者"><a href="#联系作者" class="headerlink" title="联系作者"></a>联系作者</h3><p>需要代码请私信</p>
 
                 
               </div>
@@ -303,6 +298,40 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B8%82%E5%9C%BA%E5%88%86%E6%9E%90/" class="category-chain-item">市场分析</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%88%AC%E8%99%AB/">#爬虫</a>
+      
+        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">#数据分析</a>
+      
+        <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/">#可视化</a>
+      
+        <a href="/tags/Python/">#Python</a>
+      
+    </div>
   
 </div>
 
@@ -312,8 +341,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>http://example.com/2022/08/26/某众点评爬虫采集-剧本杀市场分析-Python/</div>
+      <div>某人均月薪十万社交平台数据问题采集分析-某乎</div>
+      <div>http://example.com/2022/07/21/某人均月薪十万社交平台数据问题采集分析-某乎/</div>
     </div>
     <div class="license-meta">
       
@@ -325,7 +354,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年8月26日</div>
+          <div>2022年7月21日</div>
         </div>
       
       
@@ -355,18 +384,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/08/26/%E5%B0%8F%E7%BA%A2%E4%B9%A6%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%88%86%E6%9E%90%E5%9B%BD%E5%BA%86%E5%8E%BB%E5%93%AA%E7%8E%A9/" title="小红书数据采集分析国庆去哪玩">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">小红书数据采集分析国庆去哪玩</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/08/26/%E6%9F%90%E5%8D%9A%E6%90%9C%E7%B4%A2%E8%AF%9D%E9%A2%98%E9%87%87%E9%9B%86%E5%88%86%E6%9E%90Python%E7%88%AC%E8%99%AB/" title="某博搜索话题采集分析Python爬虫">
-                        <span class="hidden-mobile">某博搜索话题采集分析Python爬虫</span>
+                      <a href="/2022/03/07/%E3%80%90%E7%88%AC%E8%99%AB%E3%80%91Laza%E5%A4%A7%E5%95%86%E5%93%81%E9%87%87%E9%9B%86%E7%BB%B4%E5%BA%A6%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" title="【爬虫】Laza大商品采集维度数据分析">
+                        <span class="hidden-mobile">【爬虫】Laza大商品采集维度数据分析</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
