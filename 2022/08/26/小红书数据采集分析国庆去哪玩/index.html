@@ -1,0 +1,608 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Wang Yuanxin">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="距离国庆假期还有3天，作为一年里难得的长假，你肯定不想白白浪费，得给自己安排一次愉快的远行。但是去哪里玩成了头大的事情，瞬间想到小红书（https:&#x2F;&#x2F;www.xiaohongshu.com&#x2F;），号称拥有超过一亿用户的生活方式分享社区，其用户笔记内容涵盖吃穿玩乐买，涉及时尚、护肤、彩妆、美食、旅行、影视、读书、健身等各个生活方式领域，再加上社区每天产生数十亿次的笔记曝光，正如客户所言，其平台是集s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小红书数据采集分析国庆去哪玩">
+<meta property="og:url" content="http://example.com/2022/08/26/%E5%B0%8F%E7%BA%A2%E4%B9%A6%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E5%88%86%E6%9E%90%E5%9B%BD%E5%BA%86%E5%8E%BB%E5%93%AA%E7%8E%A9/index.html">
+<meta property="og:site_name" content="爱Python的王三金">
+<meta property="og:description" content="距离国庆假期还有3天，作为一年里难得的长假，你肯定不想白白浪费，得给自己安排一次愉快的远行。但是去哪里玩成了头大的事情，瞬间想到小红书（https:&#x2F;&#x2F;www.xiaohongshu.com&#x2F;），号称拥有超过一亿用户的生活方式分享社区，其用户笔记内容涵盖吃穿玩乐买，涉及时尚、护肤、彩妆、美食、旅行、影视、读书、健身等各个生活方式领域，再加上社区每天产生数十亿次的笔记曝光，正如客户所言，其平台是集s">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190928122455546.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190928124130770.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190928124421775.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190928124836748.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190928125123643.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190928125901211.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190928130448326.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190928130827686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2019092813102216.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190928131032570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190928131041662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190928132023600.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2022-08-26T05:26:56.392Z">
+<meta property="article:modified_time" content="2022-08-26T05:16:56.032Z">
+<meta property="article:author" content="Wang Yuanxin">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190928122455546.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70">
+  
+  
+  
+  <title>小红书数据采集分析国庆去哪玩 - 爱Python的王三金</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>爱Python的王三金</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="小红书数据采集分析国庆去哪玩"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-08-26 13:26" pubdate>
+          2022年8月26日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          50 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">小红书数据采集分析国庆去哪玩</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>距离国庆假期还有3天，作为一年里难得的长假，你肯定不想白白浪费，得给自己安排一次愉快的远行。但是去哪里玩成了头大的事情，瞬间想到小红书（<a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/%EF%BC%89%EF%BC%8C%E5%8F%B7%E7%A7%B0%E6%8B%A5%E6%9C%89%E8%B6%85%E8%BF%87%E4%B8%80%E4%BA%BF%E7%94%A8%E6%88%B7%E7%9A%84%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F%E5%88%86%E4%BA%AB%E7%A4%BE%E5%8C%BA%EF%BC%8C%E5%85%B6%E7%94%A8%E6%88%B7%E7%AC%94%E8%AE%B0%E5%86%85%E5%AE%B9%E6%B6%B5%E7%9B%96%E5%90%83%E7%A9%BF%E7%8E%A9%E4%B9%90%E4%B9%B0%EF%BC%8C%E6%B6%89%E5%8F%8A%E6%97%B6%E5%B0%9A%E3%80%81%E6%8A%A4%E8%82%A4%E3%80%81%E5%BD%A9%E5%A6%86%E3%80%81%E7%BE%8E%E9%A3%9F%E3%80%81%E6%97%85%E8%A1%8C%E3%80%81%E5%BD%B1%E8%A7%86%E3%80%81%E8%AF%BB%E4%B9%A6%E3%80%81%E5%81%A5%E8%BA%AB%E7%AD%89%E5%90%84%E4%B8%AA%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F%E9%A2%86%E5%9F%9F%EF%BC%8C%E5%86%8D%E5%8A%A0%E4%B8%8A%E7%A4%BE%E5%8C%BA%E6%AF%8F%E5%A4%A9%E4%BA%A7%E7%94%9F%E6%95%B0%E5%8D%81%E4%BA%BF%E6%AC%A1%E7%9A%84%E7%AC%94%E8%AE%B0%E6%9B%9D%E5%85%89%EF%BC%8C%E6%AD%A3%E5%A6%82%E5%AE%A2%E6%88%B7%E6%89%80%E8%A8%80%EF%BC%8C%E5%85%B6%E5%B9%B3%E5%8F%B0%E6%98%AF%E9%9B%86social%E5%92%8Ccommerce%E4%BA%8E%E4%B8%80%E4%BD%93%E7%9A%84%EF%BC%8C%E5%85%B6%E6%95%B0%E6%8D%AE%E4%BB%B7%E5%80%BC%E5%8F%AF%E6%83%B3%E8%80%8C%E7%9F%A5%E3%80%82">https://www.xiaohongshu.com/），号称拥有超过一亿用户的生活方式分享社区，其用户笔记内容涵盖吃穿玩乐买，涉及时尚、护肤、彩妆、美食、旅行、影视、读书、健身等各个生活方式领域，再加上社区每天产生数十亿次的笔记曝光，正如客户所言，其平台是集social和commerce于一体的，其数据价值可想而知。</a></p>
+<p><b>—–难度指数 ✩✩<br><b>—–阅读本文大概需20分钟<br>爬虫案例100篇栏目的第二篇<br><img src="https://img-blog.csdnimg.cn/20190928122455546.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+<h4 id="开始抓包"><a href="#开始抓包" class="headerlink" title="开始抓包"></a>开始抓包</h4><p>由于小红书web版关闭了，我们只好从微信小程序入手。</p>
+<p>打开小程序搜索“国庆旅游”关键词<img src="https://img-blog.csdnimg.cn/20190928124130770.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>打开charles开始抓包，搜索“国庆节旅游”，也就是小红书搜索结果的第一条标题。<br><img src="https://img-blog.csdnimg.cn/20190928124421775.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>找到了！就是这个请求；看了一下是一个get请求，复制链接输入到浏览器中提示登陆已过期。嗯～，打开pycharm，写了一个简单带headers的requests请求发现数据获取到了。<br><img src="https://img-blog.csdnimg.cn/20190928124836748.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>大致调试了一下请求头，是authorization在控制是否登陆过期。所以请求的时候记得带上它哦<br><img src="https://img-blog.csdnimg.cn/20190928125123643.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>获取列表也的代码(由于小红书比较谨慎，所以只能看到50页数据)：</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_list</span>(<span class="hljs-params">url, page</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">    获取列表页</span><br><span class="hljs-string">    &#x27;&#x27;&#x27;</span><br>    <span class="hljs-comment"># 1:按热度排序 2:按时间排序 3:综合排序</span><br>    sort = &#123;<span class="hljs-string">&quot;1&quot;</span>: <span class="hljs-string">&quot;popularity_descending&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>: <span class="hljs-string">&quot;time_descending&quot;</span>, <span class="hljs-string">&quot;3&quot;</span>: <span class="hljs-string">&quot;general&quot;</span>&#125;<br>    <span class="hljs-keyword">for</span> page <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">25</span>, <span class="hljs-number">51</span>):<br>        url = <span class="hljs-string">&#x27;https://www.xiaohongshu.com/wx_mp_api/sns/v1/search/notes?keyword=&#123;&#125;&amp;sort=&#123;&#125;&amp;page=&#123;&#125;&amp;per_page=30&amp;sid=session.1567474343950544022616&#x27;</span>.<span class="hljs-built_in">format</span>(<br>            keyword, sort[<span class="hljs-string">&quot;1&quot;</span>], page)<br><br>    authorization = <span class="hljs-string">&#x27;you authorization&#x27;</span><br>    head = &#123;<span class="hljs-string">&quot;accept&quot;</span>: <span class="hljs-string">&quot;*/*&quot;</span>,<br>            <span class="hljs-string">&quot;content-type&quot;</span>: <span class="hljs-string">&quot;application/json&quot;</span>,<br>            <span class="hljs-string">&quot;device-fingerprint&quot;</span>: <span class="hljs-string">&quot;WC39ZUyXRgdFrJLIl36pz6dYNcrGscYZZWqJlPTC2v9Zkrt3jCwWKSyDu9wYQhprJgZD8KTs1jiM0/jeT0GYQI+Xx06PQ2kgctL/WmrP2Tauiuo9Z2Nzm4Q==1487577677129&quot;</span>,<br>            <span class="hljs-string">&quot;authorization&quot;</span>: authorization,<br>            <span class="hljs-string">&quot;referer&quot;</span>: <span class="hljs-string">&quot;https://servicewechat.com/wxffc08ac7df482a27/270/page-frame.html&quot;</span>,<br>            <span class="hljs-string">&quot;accept-language&quot;</span>: <span class="hljs-string">&quot;zh-cn&quot;</span>,<br>            <span class="hljs-string">&quot;user-agent&quot;</span>: <span class="hljs-string">&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 12_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.5(0x17000523) NetType/WIFI Language/zh_CN&quot;</span>,<br>            <span class="hljs-string">&quot;accept-encoding&quot;</span>: <span class="hljs-string">&quot;br, gzip, deflate&quot;</span><br>            &#125;<br><br>    <span class="hljs-keyword">return</span> requests.get(url, headers=head).json()<br><br></code></pre></td></tr></table></figure>
+<p>列表页json中没有带每条笔记的content，只有一个ID。通过分析发现了另一个API接口。<br><img src="https://img-blog.csdnimg.cn/20190928125901211.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>将这个ID换掉你想获取的笔记的ID就大功告成了，记得带上headers哦<br>获取content代码：</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_content</span>(<span class="hljs-params">info</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">    :param info:列表页的单条数据</span><br><span class="hljs-string">    :return: 加入content后的item</span><br><span class="hljs-string">    &#x27;&#x27;&#x27;</span><br>	head = &#123;<span class="hljs-string">&quot;accept&quot;</span>: <span class="hljs-string">&quot;*/*&quot;</span>,<br>	            <span class="hljs-string">&quot;content-type&quot;</span>: <span class="hljs-string">&quot;application/json&quot;</span>,<br>	            <span class="hljs-string">&quot;device-fingerprint&quot;</span>: <span class="hljs-string">&quot;WC39ZUyXRgdFrJLIl36pz6dYNcrGscYZZWqJlPTC2v9Zkrt3jCwWKSyDu9wYQhprJgZD8KTs1jiM0/jeT0GYQI+Xx06PQ2kgctL/WmrP2Tauiuo9Z2Nzm4Q==1487577677129&quot;</span>,<br>	            <span class="hljs-string">&quot;authorization&quot;</span>: authorization,<br>	            <span class="hljs-string">&quot;referer&quot;</span>: <span class="hljs-string">&quot;https://servicewechat.com/wxffc08ac7df482a27/270/page-frame.html&quot;</span>,<br>	            <span class="hljs-string">&quot;accept-language&quot;</span>: <span class="hljs-string">&quot;zh-cn&quot;</span>,<br>	            <span class="hljs-string">&quot;user-agent&quot;</span>: <span class="hljs-string">&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 12_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.5(0x17000523) NetType/WIFI Language/zh_CN&quot;</span>,<br>	            <span class="hljs-string">&quot;accept-encoding&quot;</span>: <span class="hljs-string">&quot;br, gzip, deflate&quot;</span><br>	            &#125;<br>    info_url = <span class="hljs-string">&#x27;https://www.xiaohongshu.com/wx_mp_api/sns/v1/note/&#123;&#125;/single_feed?sid=session.1567474343950544022616&#x27;</span>.<span class="hljs-built_in">format</span>(info[<span class="hljs-string">&#x27;id&#x27;</span>])<br>    <span class="hljs-keyword">return</span> requests.get(info_url, headers=head).json()<br></code></pre></td></tr></table></figure>
+<p>抓取处理完的数据<br><img src="https://img-blog.csdnimg.cn/20190928130448326.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>源代码：</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><code class="hljs py"><span class="hljs-keyword">import</span> requests<br><span class="hljs-keyword">import</span> pymongo<br><span class="hljs-keyword">from</span> multiprocessing.dummy <span class="hljs-keyword">import</span> Pool <span class="hljs-keyword">as</span> mp<br><span class="hljs-keyword">import</span> datetime<br>db = pymongo.MongoClient()[<span class="hljs-string">&#x27;ceis_nlp&#x27;</span>][<span class="hljs-string">&#x27;xiaohongshu&#x27;</span>]<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_list</span>(<span class="hljs-params">url, page</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">    获取列表页</span><br><span class="hljs-string">    &#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">return</span> requests.get(url, headers=head).json()<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">save_mongo</span>(<span class="hljs-params">item</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">    :param item:需要保存的item</span><br><span class="hljs-string">    :return: 保存数据</span><br><span class="hljs-string">    &#x27;&#x27;&#x27;</span><br>    <span class="hljs-keyword">try</span>:<br>        res = db.save(item)<br>        <span class="hljs-built_in">print</span>(res)<br>    <span class="hljs-keyword">except</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;重复!&#x27;</span>)<br><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_content</span>(<span class="hljs-params">info</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">    :param info:列表页的单条数据</span><br><span class="hljs-string">    :return: 加入content后的item</span><br><span class="hljs-string">    &#x27;&#x27;&#x27;</span><br><br>    info_url = <span class="hljs-string">&#x27;https://www.xiaohongshu.com/wx_mp_api/sns/v1/note/&#123;&#125;/single_feed?sid=session.1567474343950544022616&#x27;</span>.<span class="hljs-built_in">format</span>(info[<span class="hljs-string">&#x27;id&#x27;</span>])<br>    content_data = requests.get(info_url, headers=head).json()<br>    info[<span class="hljs-string">&#x27;desc&#x27;</span>] = <span class="hljs-built_in">repr</span>(content_data[<span class="hljs-string">&#x27;data&#x27;</span>][<span class="hljs-number">0</span>][<span class="hljs-string">&#x27;note_list&#x27;</span>][<span class="hljs-number">0</span>][<span class="hljs-string">&#x27;desc&#x27;</span>])<br>    info[<span class="hljs-string">&#x27;time&#x27;</span>] = datetime.datetime.fromtimestamp(content_data[<span class="hljs-string">&#x27;data&#x27;</span>][<span class="hljs-number">0</span>][<span class="hljs-string">&#x27;note_list&#x27;</span>][<span class="hljs-number">0</span>][<span class="hljs-string">&#x27;time&#x27;</span>])<br>    info[<span class="hljs-string">&quot;_id&quot;</span>] = info[<span class="hljs-string">&quot;id&quot;</span>]<br>    save_mongo(info)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">read_data</span>(<span class="hljs-params">listpage_json</span>):<br>    <span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">    :param listpage_json:列表页的json数据</span><br><span class="hljs-string">    :return: 单条详情数据</span><br><span class="hljs-string">    &#x27;&#x27;&#x27;</span><br>    info_data = listpage_json[<span class="hljs-string">&#x27;data&#x27;</span>][<span class="hljs-string">&#x27;notes&#x27;</span>]<br>    <span class="hljs-keyword">for</span> info <span class="hljs-keyword">in</span> info_data:<br>        get_content(info)<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>(<span class="hljs-params">url, page</span>):<br>    <span class="hljs-built_in">print</span>(page)<br>    read_data(get_list(url, page))<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    authorization = <span class="hljs-string">&#x27;19bc4862-d820-481e-b83d-******&#x27;</span><br>    head = &#123;<span class="hljs-string">&quot;accept&quot;</span>: <span class="hljs-string">&quot;*/*&quot;</span>,<br>            <span class="hljs-string">&quot;content-type&quot;</span>: <span class="hljs-string">&quot;application/json&quot;</span>,<br>            <span class="hljs-string">&quot;device-fingerprint&quot;</span>: <span class="hljs-string">&quot;WC39ZUyXRgdFrJLIl36pz6dYNcrGscYZZWqJlPTC2v9Zkrt3jCwWKSyDu9wYQhprJgZD8KTs1jiM0/jeT0GYQI+Xx06PQ2kgctL/WmrP2Tauiuo9Z2Nzm4Q==1487577677129&quot;</span>,<br>            <span class="hljs-string">&quot;authorization&quot;</span>: authorization,<br>            <span class="hljs-string">&quot;referer&quot;</span>: <span class="hljs-string">&quot;https://servicewechat.com/wxffc08ac7df482a27/270/page-frame.html&quot;</span>,<br>            <span class="hljs-string">&quot;accept-language&quot;</span>: <span class="hljs-string">&quot;zh-cn&quot;</span>,<br>            <span class="hljs-string">&quot;user-agent&quot;</span>: <span class="hljs-string">&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 12_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.5(0x17000523) NetType/WIFI Language/zh_CN&quot;</span>,<br>            <span class="hljs-string">&quot;accept-encoding&quot;</span>: <span class="hljs-string">&quot;br, gzip, deflate&quot;</span><br>            &#125;<br><br>    pools = mp(<span class="hljs-number">16</span>)<br>    keyword = <span class="hljs-string">&#x27;国庆旅游&#x27;</span><br>    <span class="hljs-comment"># 1:按热度排序 2:按时间排序 3:综合排序</span><br>    sort = &#123;<span class="hljs-string">&quot;1&quot;</span>: <span class="hljs-string">&quot;popularity_descending&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>: <span class="hljs-string">&quot;time_descending&quot;</span>, <span class="hljs-string">&quot;3&quot;</span>: <span class="hljs-string">&quot;general&quot;</span>&#125;<br>    <span class="hljs-keyword">for</span> page <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">25</span>, <span class="hljs-number">51</span>):<br>        url = <span class="hljs-string">&#x27;https://www.xiaohongshu.com/wx_mp_api/sns/v1/search/notes?keyword=&#123;&#125;&amp;sort=&#123;&#125;&amp;page=&#123;&#125;&amp;per_page=30&amp;sid=session.1567474343950544022616&#x27;</span>.<span class="hljs-built_in">format</span>(keyword, sort[<span class="hljs-string">&quot;1&quot;</span>], page)<br>        pools.apply_async(main, args=(url, page,))<br>        <span class="hljs-comment"># main(url, page)</span><br>    pools.close()<br>    pools.join()<br><br></code></pre></td></tr></table></figure>
+
+<h3 id="统计分析"><a href="#统计分析" class="headerlink" title="统计分析"></a>统计分析</h3><p>数据获取到了，接下来就是分析。数据不用起来就是费数据对吧～<br>我首先把获取的desc进行了命名实体识别(NER)，没有自己写而是调用百度的句法分析API。<br><img src="https://img-blog.csdnimg.cn/20190928130827686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>有了这个结果，就剩统计了。通过pandas三两下就出结果了。<br><img src="https://img-blog.csdnimg.cn/2019092813102216.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190928131032570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190928131041662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"><br>从统计结果中我们可以看出最热的景点是洪崖洞。最热的城市是重庆。<br>你是不是以为到这里这篇文章就结束了。<br>对没错～你猜对了。<br><img src="https://img-blog.csdnimg.cn/20190928132023600.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3Mjc1NDA1,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif" lazyload alt="在这里插入图片描述"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>小红书数据采集分析国庆去哪玩</div>
+      <div>http://example.com/2022/08/26/小红书数据采集分析国庆去哪玩/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Wang Yuanxin</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年8月26日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/08/26/%E6%9F%90%E4%BC%97%E7%82%B9%E8%AF%84%E7%88%AC%E8%99%AB%E9%87%87%E9%9B%86-%E5%89%A7%E6%9C%AC%E6%9D%80%E5%B8%82%E5%9C%BA%E5%88%86%E6%9E%90-Python/" title="">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
